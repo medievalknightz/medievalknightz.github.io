@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<h1>Some Memorable Movies</h1>
+<h3><span class="ital bold">Hallucination</span> (Madison Wilson, 2023)</h3>
+<div class="sideByside">
+<img class="filmStill" onClick="onClick_HA_img01()" src="images/Title.PNG" alt="Title of my film">
+<img class="filmStill" onClick="onClick_HA_img02()" src="images/friends.PNG" alt="Two friends walking to the beach">
+<img class="filmStill" onClick="onClick_HA_img03()" src="images/creepy_scene.PNG" alt="Creepy guy walking down stairs">
+</div>
+
+<p class="filmInfo" id="HA_text">The film Hallucination follows two college friends who accidentally piss a random person off on their way to the beach. While at the beach, the two start to suspect that they have been followed and suspect they have been stalked, but are they really being followed, or is something beyond the surface happening? </p>
+	
+
+<button type="button" onClick="gotoMovie()" id="gotoMovie_btn">Go to the movie</button>
+</body>
+<script>
+
+//HALLUCINATION SECTION *******************************************************************************************************
+var gotoMovie_btn = document.getElementById("gotoMovie_btn")
+gotoMovie_btn.style.visibility = "hidden";
+
+var img01_clicked = false;
+var img02_clicked = false;
+var img03_clicked = false;
+
+var HA_text = document.getElementById("HA_text");
+
+var HA_text = document.getElementById("HA_text");
+
+var HA01= "Hallucination is a film that follows two friends who intend to go to the beach together. However, one of the friends is hallucinating, believing her friend is there when she isn't. As a result, she becomes increasingly paranoid when a concerned pedestrian starts following them when he notices she's unwell."
+
+var HA02= "In this scene, The two friends walk and laugh as they are about to play soccer at the beach. The laughs will soon stop as they both get an eerie feeling that someone from afar is watching them. Was it the guy from before or someone else, and why are they being watched?"
+
+var HA03= "In the film, in the end, it's revealed that the stalker was just a concerned pedestrian who noticed that the girl who bumped into him was mentally unwell. He followed her to see if she needed help because the girl was under the impression that she was going to the beach with her friend when her friend was never there."
+
+
+
+function onClick_HA_img01(){
+	HA_text.innerHTML = HA01;
+	img01_clicked = true;
+	console.log("img01_clicked = " + img01_clicked);
+	revealButton();
+}
+
+function onClick_HA_img02(){
+	HA_text.innerHTML = HA02;
+	img02_clicked = true;
+	console.log("img02_clicked = " + img02_clicked);
+	revealButton();
+}
+
+function onClick_HA_img03(){
+	HA_text.innerHTML = HA03;
+	img03_clicked = true;
+	console.log("img03_clicked = " + img03_clicked);
+	revealButton();
+}
+
+function revealButton(){
+	if (img01_clicked && img02_clicked && img03_clicked){
+		console.log("REVEAL BUTTON");
+		gotoMovie_btn.style.visibility = "visible";
+	}	
+}
+	
+function gotoMovie(){
+	window.open("https://youtu.be/zymAFfWbtW4", "_blank")
+}
+</script>
+</html>
