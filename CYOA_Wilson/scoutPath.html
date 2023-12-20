@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Adventure Game</title>
+    <link href="css/cyoa_mainpage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- Image placeholder for the view -->
+    <img src="images/view.jpg" class="pages" id="coverPage" alt="Picture Of View">
+
+    <!-- Video container (initially hidden) -->
+    <div id="videoContainer" style="display: none;">
+        <video id="displayedVideo" muted="muted">
+            <source src="video/river.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Buttons -->
+    <div class="options">
+        <button id="river" onclick="goDownToRiver()" style="display: block;">Go Down To River</button>
+    </div>
+
+    <script>
+        // Set a timeout to hide the view image after 3 seconds
+        setTimeout(function() {
+            // Hide the view image
+            document.getElementById("coverPage").style.display = "none";
+
+            // Show the advanceTime2 image
+            var advanceTimeImage = document.createElement("img");
+            advanceTimeImage.src = "images/advanceTime2.png";
+            advanceTimeImage.alt = "Advance Time 2";
+            advanceTimeImage.id = "advanceTimeImage";
+            advanceTimeImage.classList.add("pages");
+
+            // Style for advanceTime2 image
+            advanceTimeImage.style.overflowX = "hidden";
+            advanceTimeImage.style.overflowY = "hidden";
+            advanceTimeImage.style.width = "100%";
+            advanceTimeImage.style.height = "100%";
+            advanceTimeImage.style.position = "fixed";
+            advanceTimeImage.style.top = "0";
+            advanceTimeImage.style.bottom = "0";
+            advanceTimeImage.style.left = "0";
+            advanceTimeImage.style.right = "0";
+
+            document.body.appendChild(advanceTimeImage);
+
+            // Create and display the button
+            var goDownToRiverButton = document.createElement("button");
+            goDownToRiverButton.innerHTML = "Go Down To River";
+            goDownToRiverButton.id = "river";
+            goDownToRiverButton.onclick = function() {
+                window.location.href = "riverVideo.html"; // Change the URL to riverVideo.html
+            };
+            document.body.appendChild(goDownToRiverButton);
+
+        }, 3000);
+
+        // Initially hide the button
+        document.getElementById("river").style.display = "none";
+    </script>
+
+</body>
+</html>
+
+
+
+
+

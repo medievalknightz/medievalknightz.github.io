@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Adventure Game</title>
+    <link href="css/cyoa_mainpage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- Image container -->
+    <img src="images/night.png" id="coverPage" class="pages" alt="Night Image">
+
+    <!-- Buttons -->
+    <div class="options">
+        <button id="enjoyStars" onclick="enjoystars()" style="display: block;">Enjoy Stars</button>
+        <button id="stay" onclick="stay()" style="display: block;">Start Fire and Stay</button>
+    </div>
+
+    <script>
+        function enjoystars() {
+            window.location.href = "enjoystars.html";
+        }
+
+        function stay() {
+            window.location.href = "stay.html";
+        }
+    </script>
+
+</body>
+</html>

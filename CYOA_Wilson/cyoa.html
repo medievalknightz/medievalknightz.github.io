@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Adventure Game</title>
+    <link href="css/cyoa_mainpage.css" rel="stylesheet" type="text/css">
+<body>
+<!-- OPTIONS SECTION -->
+
+<div>
+    <img src="images/coverPage.png" class="pages" id="coverPage" alt="Cover Page For Game">
+</div>
+
+<div class="choices">
+    <h1 id="start" onClick="changeImageafterClick()">PLAY NOW</h1>
+</div>
+
+<div class="options">
+    <p>
+        <button id="choice1" onClick="makeChoice1()">Enjoy Scenery</button>
+    </p>
+    <p>
+        <button id="choice2" onClick="makeChoice2()">Keep Walking</button>
+    </p>
+</div>
+
+<script>
+    // IMAGES FOR PAGE---------------------------
+    var choosePage = "images/choosePage.png";
+    //-------------------------------------------
+
+    // FUNCTION FOR CLICKING PLAY BUTTON AND SWITCHING TO CHOOSE PAGE
+   
+    function changeImageafterClick() {
+    	console.log("Clicked play button");
+    	hidePlayButton();
+    	showOptions();
+    	document.getElementById("coverPage").src = choosePage;
+	}
+
+
+    function hidePlayButton() {
+        document.getElementById("start").style.display = "none";
+    }
+
+    function showOptions() {
+        document.getElementById("choice1").style.display = "block";
+        document.getElementById("choice2").style.display = "block";
+    }
+
+  	function makeChoice1() {
+    	console.log("Clicked choice 1");
+    	window.location.href = "option1.html";
+}
+
+	function makeChoice2() {
+    	console.log("Clicked choice 2");
+    	window.location.href = "option2.html";
+}
+</script>
+
+
+
+</body>
+</head>
+</html>
+
+

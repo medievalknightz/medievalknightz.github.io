@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Adventure Game</title>
+    <link href="css/cyoa_mainpage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <img src="images/squirrel.jpg" class="pages" id="coverPage" alt="Squirrel Image">
+
+    <div class="options">
+        <button id="keepWalking2" class="options" onclick="keepWalking()" style="display: none;">Keep Walking</button>
+        <button id="choice1" class="options" style="display: none;" onclick="makeChoice1()">Enjoy Scenery</button>
+        <button id="choice2" class="options" style="display: none;" onclick="makeChoice2()">Keep Walking</button>
+    </div>
+
+  <script>
+	  
+  
+    var choosePage2 = "images/choosePage2.png";  
+    function keepWalking() {
+        window.location.href = "option2.html";
+    }
+
+    // FUNCTION TO SWITCH IMAGE AFTER 3 SECONDS AND SHOW OPTIONS
+	  
+    setTimeout(function () {
+        showChoosePage2();
+        console.log("Looked at squirrel");
+    }, 3000);
+
+    function showChoosePage2() {
+        var coverPage = document.getElementById("coverPage");
+        var keepWalkingButton = document.getElementById("keepWalking2");
+
+        if (coverPage.src.endsWith("squirrel.jpg")) {
+            coverPage.src = choosePage2;
+            keepWalkingButton.style.display = "block";
+        }
+    }
+
+</script>
+
+
+</body>
+</html>
+
+

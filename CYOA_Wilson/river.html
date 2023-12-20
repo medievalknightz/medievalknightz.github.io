@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Adventure Game</title>
+    <link href="css/cyoa_mainpage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- Video player for river.mp4 -->
+    <video id="coverPage" class="pages" width="100%" height="auto" controls>
+        <source src="videos/river.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        var riverVideo = document.getElementById("coverPage");
+
+        riverVideo.addEventListener("ended", function() {
+            riverVideo.src = "";
+
+            var riverOptionsImage = document.createElement("img");
+            riverOptionsImage.src = "images/riverOptions.png";
+            riverOptionsImage.alt = "River Options Image";
+            document.body.appendChild(riverOptionsImage);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Adventure Game</title>
+    <link href="css/cyoa_mainpage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	
+   
+    <img src="images/openBag.png" id="coverPage" alt="Open Bag Image">
+
+    <!--  -------------------------BUTTONS--------------------------------->
+    <div class="options">
+        <button id="choice3" onclick="inspectMap()">Inspect Map</button>
+        <button id="choice4" onclick="eatSnacks()">Eat Snacks</button>
+    </div>
+    <!--------------------------------------------------------------------->
+
+ 	<script>
+     
+        // CODE FOR BUTTON CLICKS
+		
+        function inspectMap() {
+            console.log("Clicked Inspect Map");
+			window.location.href = "inspectMap.html";
+        }
+
+        function eatSnacks() {
+            console.log("Clicked Eat Snacks");
+			window.location.href = "option3.html";
+        }
+    </script>
+
+</body>
+</html>

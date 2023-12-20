@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Adventure Game</title>
+    <link href="css/cyoa_mainpage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <img src="images/inspectMap.png" class="pages" id="coverPage" alt="Inspect Map option">
+
+    <!-- Buttons -->
+    <div class="options">
+        <button id="goaround" onclick="goaround()" style="display: none;">Go Around River</button>
+    </div>
+
+    <script>
+        function goaround() {
+            window.location.href = "goAround.html";
+        }
+
+        function goBackHome() {
+            window.location.href = "goAround.html";
+        }
+
+        setTimeout(function () {
+            document.getElementById("coverPage").src = "images/advanceTime2.png";
+            document.getElementById("goaround").style.display = "block";
+        }, 2000);
+    </script>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+

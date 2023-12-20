@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Adventure Game</title>
+    <link href="css/cyoa_mainpage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <img src="images/advanceTime.png" id="coverPage" alt="Open Bag Choice">
+
+    <!--  -------------------------BUTTONS--------------------------------->
+    <div class="options">
+        <button id="choice3" onclick="goToScoutPath()">Scout Path</button>
+        <button id="choice4" onclick="goToRummageBag()">Rummage Bag</button>
+    </div>
+    <!--------------------------------------------------------------------->
+
+    <script>
+        // Functions for button clicks
+        function goToScoutPath() {
+            window.location.href = "scoutPath.html";
+        }
+
+        function goToRummageBag() {
+            window.location.href = "option4.html";
+        }
+    </script>
+
+</body>
+</html>
